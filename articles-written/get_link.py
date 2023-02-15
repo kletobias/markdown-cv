@@ -84,9 +84,10 @@ def get_title_description(dir,files):
 <H4>{td[k]["title"]}</H4>\
 **Description:** {td[k]["description"]}\
 <br>\
-                **Category:** {td[k]["category"]}<br>\
+                **Category:** {td[k]["category"]} | **Word Count**\
+                {td[k]["word_count"]} | **{td[k]["url"]}**<br>\
                 **Tags:**  {td[k]["tags"]}<br>\
-                **{td[k]["url"]}**<br><br>'
+                <br><br>'
         md = Markdown()
 #        print(f'CONVERTED: {md.convert(cv_text)}')
         cv_text_all.append(md.convert(cv_text))
