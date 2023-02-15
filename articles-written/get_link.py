@@ -84,8 +84,8 @@ def get_title_description(dir,files):
 <H4>{td[k]["title"]}</H4>\
 **Description:** {td[k]["description"]}\
 <br>\
-                **Category:** *{td[k]["category"]}* | **Word Count:**\
                 **Tags:**  {td[k]["tags"]}<br>\
+                **Category:** *{td[k]["category"]}* | **Word Count:**\
                 {td[k]["word_count"]} | **{td[k]["url"]}**<br>\
                 <br><br>'
         md = Markdown()
