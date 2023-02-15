@@ -27,41 +27,46 @@ pat_html = re.compile(r'<[^>]+>|\\n',re.MULTILINE)
 out = []
 seen = set()
 tags = []
-patta = re.compile('^tags:\s\[(.+)\]$',re.IGNORECASE)
-patsub = re.compile('\'|\[|\]')
+patta = re.compile('tags:\s\[(?:(?:\s?\'[a-z A-Z-]+\')+,?)+\]$',re.IGNORECASE)
+patsub = re.compile('"')
 tre = re.compile(r'''\,''')
 l_remove = re.compile(r'\]|\[')
 l_remove2 = re.compile(r'\\n')
-def ct(nlp):
-    return Tokenizer(nlp.vocab, infix_finditer=tre.finditer)
-nlp.tokenizer= ct(nlp)
+# def ct(nlp):
+#     return Tokenizer(nlp.vocab, infix_finditer=tre.finditer)
+# nlp.tokenizer= ct(nlp)
 
 for f in files:
     with open(os.path.join(dir,f),'r') as a:
         for line in itertools.islice(a,2,8):
-            tal = patta.search(line)
+            tal = patta.findall(line)
             if tal != None:
-                tals = patsub.sub('',tal[1])
-                tags.append(tals)
+                for i in tal:
+#                    tals = patsub.sub('\'',i)
+                    print(f'tals {i}')
+                    tags.append(i)
             else:
                 continue
-for (idx,tag) in enumerate(tags):
-    tags[idx] = l_remove.sub('',tag)
-    tags[idx] = l_remove2.sub(' ',tag)
-tags = np.array(tags)
-print(np.array(tags).shape)
-print(tags)
-print(str(tags).split('\''))
-doc = nlp(str(tags))
-words = [token.text_with_ws for token in doc]
-# words = [token.text_with_ws for token in doc if token.is_stop != True and token.is_punct != True]
-print(f'{len(words)}')
-for w in words:
+# for (idx,tag) in enumerate(tags):
+#     tags[idx] = l_remove.sub('',tag)
+#     tags[idx] = l_remove2.sub(' ',tag)
+print(len(tags))
+tags = list(set(tags))
+print(len(tags))
+# print(np.array(tags).shape)
+print(f'\n\n TAGS: {tags[:2]}')
+# print(str(tags))
+# doc = nlp(str(tags))
+#words = [token.text_with_ws for token in doc]
+# words = [token.text for token in doc if token.is_stop != True and token.is_punct != True]
+# print(words)
+# print(f'{len(words)}')
+for w in tags:
     if w not in seen:
+        print(f'w {w}')
         out.append(w)
     seen.add(w)
-
-print(out)
+print(f'\n\nout: {out}')
 # for line in itertools.islice(ff,2,8):
 #     ttl = patt.search(line)
 #     ddl = patd.search(line)
