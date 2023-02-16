@@ -73,6 +73,9 @@ Cooling, power series, optics, alchemy, planetary motions, apples.
     - **Written Using:** *Latex* & *Python*
     - **Pages:** 69
     - **Grade:** 1.0
+        <!-- TODO: Add Link to Bachelor Thesis: First one in Articles Section -->
+    - **Full Text & Abstract:** See Section 'Bachelor Thesis' 
+<!-- TODO: Continue here!!! -->
 - **Relevant Courses Completed** <br>
 
 
@@ -97,7 +100,35 @@ Cooling, power series, optics, alchemy, planetary motions, apples.
 - Graduated with Abitur.
 
 
+## Bachelor Thesis
 
+### Data Mining: Hyperparameter Optimization For Real Estate Prediction Models
+<strong>Abstract:</strong><br>
+Combining a highly scalable and customisable process,
+with very accurate prediction results using machine learning models, is what
+this work proposes. The customisation is guided by what information the user
+seeks to gain from the process. This makes the process applicable for a variety
+of sectors, such as Banking & Finance, Marketing and urban development among
+others. It evaluates the process of using self-acquired data from an online real
+estate platform, gained from deploying a custom web scraping algorithm. This
+data is then combined with several spatial features for predicting the base rent
+for apartments on a validation dataset. The analysis and predictions are made
+for rental apartment listings within the Hanseatic City of Hamburg. The spatial
+features originate from sources other than that of the apartments data and have
+to be adapted to it first, therefore. Predictions are made using state of the
+art machine learning models, in the form of a **Lasso Regression** model and a
+**XGBoost Regressor** model. The Hyperparameter Optimisation techniques **grid
+search** and **random search** are compared, during the optimisation process.
+The focus is on maximising prediction accuracy of the models. The best scores,
+expressed in **RMSE**, are 190.68 for the **Lasso** and 115.39 for the **XGBoost
+Regressor**. Differences in complexity and interpretability between the models
+are discussed and associated with it, the strengths and weaknesses of the
+respective model are pointed out.
+
+<!-- TODO: Add link to hosted pdf file on AWS. -->
+
+<!-- WARNING: outdated articles section, generate new one with latest changes
+    and no white space tags and categories!!! -->
 ## Articles
 
 <!-- A list is also available [online](http://scholar.google.co.uk/citations?user=LTOTl0YAAAAJ) -->
