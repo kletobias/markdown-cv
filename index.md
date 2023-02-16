@@ -16,11 +16,26 @@ title: Tobias Klein's CV
 Participating in Machine Learning competitions and expanding my toolkit
 full-time.
 
-### Specialized In
+### Specialized In Machine Learning
 <!-- TODO: Fill out Specialized in -->
 
-Laws of motion, gravitation, minting coins, disliking [Robert Hooke](http://en.wikipedia.org/wiki/Robert_Hooke)
+**Solving Machine Learning Problems using Python** and an iterative process,
+that generally incorporates the following steps, possibly going back and forth
+between the steps:
 
+1. Define the problem
+    - Is it a regression problem
+    - Is it a classification problem
+    - Is it other higher order problem type
+2. Prepare Data
+    - Data Preprocessing
+    - Feature Selection
+    - Feature Engineering
+3. Models
+    - Candidate Model Selection
+    - Hyperparameter Optimization (optional: depending on model)
+    - Model Evaluation/Interpretation
+    - Finalize Model
 
 ### Research interests
 
@@ -29,18 +44,57 @@ Cooling, power series, optics, alchemy, planetary motions, apples.
 
 ## Education
 
-`1654-2019`
-__The King's School, Grantham.__
+### Higher Education
 
-`June 1661 - now`
-__Trinity College, Cambridge__
+`2009 - 2011` **Heinrich Heine University**, Düsseldorf<br>
+- **Subject:** Law (Jura)<br>
+- **Courses Completed**
+    - Zivilrecht: BGB AT, Schuldrecht AT & BT, Hausarbeit;
+    - Strafrecht: STGB AT I-II, Hausarbeit im Strafrecht, Übung im Strafrecht;
+    - Öffentliches Recht: Polizeirecht, Grundrechte, Allg. Verwaltungsrecht,
+    - Verwaltungsprozessrecht; 1. Teil Kurs im Angloamerikanischen Rechtbr>
 
-- Sizar
+`2011 - 2016` **LMU/Freiburg University**, Munich/Freiburg i. Br.<br>
+- **Subject:** Mathematics B.Sc.<br>
+- **Courses Completed**
+    - Linear Algebra I-II | Grades: {'I': 1.7, 'II': 2.3}
+    - Analysis I-III | Grades: {'I': 1.3, 'III': 1.7}
+    - Stochastic | Grade: 4.0
+    - Complex Analysis | Grade: 4.0
+    - Futures And Options | Grade: 3.7
+    - Exercise In Numerics Using **C** To Implement Methods From Linear Algebra.
 
-`1667 - death`
-__Trinity College, Cambridge__
+`2016 - 2019` **Freiburg University**, Freiburg i. Br.<br>
+- **Subject:** Economics Focused Business Administration (BWL Non-Profit &
+    Public Management)<br>
+- **Final Grade:** 1.6
+- **Bachelor Thesis:** 
+    - **Title:** *'Data Mining: Hyperparameter Optimization For Real Estate Prediction Models'*
+    - **Written Using:** *Latex* & *Python*
+    - **Pages:** 69
+    - **Grade:** 1.0
+- **Relevant Courses Completed** <br>
 
-- Fellow
+
+
+### School
+
+`1993 - 1994` **Lincoln Elementary School**, Kampala, Uganda
+
+`1994 - 1995` **Kindergarten**, Freiburg i. Br.
+
+`1995 - 1999` **Elementary School**, Zell a.H.
+
+`1999 - 2006` **High School**, Freiburg i. Br.
+
+`2006 - 2006` **Secondary School**, Whistler, Canada<br>
+ - Full-time mountain bike junior development program with participation in
+     races.
+
+`2006 - 2007` **High School**, Freiburg i. Br.
+
+`2007 - 2008` **High School**, Hamburg<br>
+- Graduated with Abitur.
 
 
 

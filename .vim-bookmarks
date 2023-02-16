@@ -1,0 +1,3 @@
+let l:bm_file_version = 1
+let l:bm_sessions = {'default': {'/Users/tobias/Dropbox/documents/job/old_files_from_documents_folder/cv/CV Word 08.2015.html': [{'sign_idx': 9500, 'line_nr': 840, 'content': '<body lang=en-DE style=''tab-interval:35.4pt;word-wrap:break-word''>'},],}}
+let l:bm_current_session = 'default'
