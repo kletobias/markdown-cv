@@ -36,10 +36,12 @@ between the steps:
     - Model Evaluation/Interpretation
     - Finalize Model
 
-### Research interests
 
-Cooling, power series, optics, alchemy, planetary motions, apples.
+## Language Proficiency
 
+- German: Native
+- English: Bilingual Proficiency
+- Spanish: Elementary Proficiency
 
 ## Education
 
