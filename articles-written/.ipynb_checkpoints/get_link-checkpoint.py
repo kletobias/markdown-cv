@@ -1,4 +1,33 @@
+# ---
+# jupyter:
+#   jupytext:
+#     cell_metadata_filter: -all
+#     formats: ipynb,py:percent
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.14.4
+#   kernelspec:
+#     display_name: Python 3 (ipykernel)
+#     language: python
+#     name: python3
+# ---
+
+# %%
+# # !pip install ipyparallel
+# # !pip install markdown2
+# # !pip install spacy
+# # !python -m spacy download en_core_web_sm
+# !ipcluster start -n 9
+
+# %%
+from ipyparallel import Client
+rc = Client()
+rc.ids
+# %px
 import os
+print(f"Process: {os.getpid():d}.")
 import itertools
 import re
 from markdown2 import Markdown
@@ -6,9 +35,11 @@ import spacy
 nlp = spacy.load("en_core_web_sm")
 import en_core_web_sm
 
+# %%
 nlp = en_core_web_sm.load()
 
 
+# %%
 dir='/Users/tobias/all_code/projects/portfolio-website-2022/_projects/'
 files = os.listdir(dir)
 host = 'https://deep-learning-mastery.com/projects/'
@@ -16,6 +47,7 @@ host = 'https://deep-learning-mastery.com/projects/'
 #     print(f)
 #     print(f'is .md: {f[-3:] == ".md"}')
 
+# %%
 def cl(files,host):
     md_files = []
     link = {}
@@ -32,9 +64,12 @@ def cl(files,host):
 
     return linkf
 
+# %%
 mdf = cl(files,host)
 print(mdf)
 
+# %%
+# %px
 def get_title_description(dir,files):
     patt = re.compile('^title:\s[\'\"](.+)[\'\"]$',re.IGNORECASE)
     patd = re.compile('^description:\s[\'\"](.+)[\'\"]$',re.IGNORECASE)
@@ -82,6 +117,7 @@ def get_title_description(dir,files):
     for k in sorted(td.keys()):
         print(td[k].items())
         cv_text = f'\
+<br>\
 <H4>{td[k]["title"]}</H4>\
 **Description:** {td[k]["description"]}\
 <br>\
@@ -90,7 +126,7 @@ def get_title_description(dir,files):
                 {td[k]["word_count"]} | **{td[k]["url"]}**<br>\
                 <br><br>'
         md = Markdown()
-        print(f'CONVERTED: {md.convert(cv_text)}')
+#        print(f'CONVERTED: {md.convert(cv_text)}')
         cv_text_all.append(md.convert(cv_text))
 
     with open('cv_articles.md','w+') as f:
@@ -98,6 +134,7 @@ def get_title_description(dir,files):
             f.write(item)
     return cv_text_all
 
+# %%
 td = get_title_description(dir,files)
 for item in td:
     print()
