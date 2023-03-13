@@ -10,6 +10,7 @@ nlp = en_core_web_sm.load()
 
 
 dir='/Users/tobias/all_code/projects/portfolio-website-2022/_projects/'
+outdir='/Users/tobias/all_code/projects/portfolio-website-2022/references/'
 files = os.listdir(dir)
 host = 'https://deep-learning-mastery.com/projects/'
 # for f in files:
@@ -81,19 +82,18 @@ def get_title_description(dir,files):
         linkf.append(f'[{k}]({v})')
     for k in sorted(td.keys()):
         print(td[k].items())
-        cv_text = f'\
-<H4>{td[k]["title"]}</H4>\
-**Description:** {td[k]["description"]}\
-<br>\
-                **Tags:**  {td[k]["tags"]}<br>\
-                **Category:** *{td[k]["category"]}* | **Word Count:**\
-                {td[k]["word_count"]} | **{td[k]["url"]}**<br>\
-                <br><br>'
+        cv_text = (f'<p><H3>{td[k]["title"]}</H3></p>'
+                   f'<p>**Description:** {td[k]["description"]}<br>'
+                   f'**Tags:** {td[k]["tags"]}<br>'
+                   f'**Category:** *{td[k]["category"]}* | **Word Count:** {td[k]["word_count"]} | **{td[k]["url"]}**</p><br>'
+                   f'<br><br>'
+                   f'\n'
+                   )
         md = Markdown()
         print(f'CONVERTED: {md.convert(cv_text)}')
         cv_text_all.append(md.convert(cv_text))
 
-    with open('cv_articles.md','w+') as f:
+    with open(os.path.join(outdir,'cv_articles.md'),'w+') as f:
         for item in cv_text_all:
             f.write(item)
     return cv_text_all
